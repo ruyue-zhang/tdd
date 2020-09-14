@@ -1,4 +1,6 @@
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class MommifierTest {
@@ -8,5 +10,13 @@ public class MommifierTest {
             Mommifier mommifier = new Mommifier();
             mommifier.addMommy(null);
         });
+    }
+
+    @Test
+    void should_return_itself_when_input_not_include_vowels() throws InputException {
+        Mommifier mommifier = new Mommifier();
+        String input = "try";
+        String result = mommifier.addMommy(input);
+        assertEquals("try", result);
     }
 }
