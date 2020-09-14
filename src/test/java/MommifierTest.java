@@ -35,4 +35,12 @@ public class MommifierTest {
         String result = mommifier.addMommy(input);
         assertEquals("rename", result);
     }
+
+    @Test
+    void should_insert_mommy_when_vowels_more_than_30_percent_and_repeat() throws InputException {
+        Mommifier mommifier = new Mommifier();
+        String input = "zooom";
+        String result = mommifier.addMommy(input);
+        assertEquals("zomommyomommyom", result);
+    }
 }
