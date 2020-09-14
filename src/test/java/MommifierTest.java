@@ -27,4 +27,12 @@ public class MommifierTest {
         String result = mommifier.addMommy(input);
         assertEquals("mommy", result);
     }
+
+    @Test
+    void should_return_itself_when_vowels_more_than_30_percent_but_no_repeat() throws InputException {
+        Mommifier mommifier = new Mommifier();
+        String input = "rename";
+        String result = mommifier.addMommy(input);
+        assertEquals("rename", result);
+    }
 }

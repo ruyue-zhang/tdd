@@ -6,6 +6,8 @@ public class Mommifier {
             return input;
         } else if(!isVowelsMoreThan30Percent(input)) {
             return input;
+        } else if(isVowelsMoreThan30Percent(input)) {
+            return input;
         }
         return null;
     }
