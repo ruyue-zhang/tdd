@@ -4,6 +4,8 @@ public class Mommifier {
             throw new InputException();
         } else if(!isContainVowels(input)){
             return input;
+        } else if(!isVowelsMoreThan30Percent(input)) {
+            return input;
         }
         return null;
     }
@@ -16,5 +18,16 @@ public class Mommifier {
             }
         }
         return false;
+    }
+
+    private Boolean isVowelsMoreThan30Percent(String input) {
+        String vowels = "aeiou";
+        int vowelCount = 0;
+        for (int i = 0; i < input.length(); i++) {
+            if(vowels.contains(input.charAt(i) + "")) {
+                vowelCount++;
+            }
+        }
+        return input.length() / vowelCount < 3;
     }
 }

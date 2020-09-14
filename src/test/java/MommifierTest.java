@@ -19,4 +19,12 @@ public class MommifierTest {
         String result = mommifier.addMommy(input);
         assertEquals("try", result);
     }
+
+    @Test
+    void should_return_itself_when_vowels_less_than_30_percent() throws InputException {
+        Mommifier mommifier = new Mommifier();
+        String input = "mommy";
+        String result = mommifier.addMommy(input);
+        assertEquals("mommy", result);
+    }
 }
